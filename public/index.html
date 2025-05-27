@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um Amigo - Dê um lar para animais de rua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+    
+    
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-[#A3B18A] py-4 px-6 shadow-md" aria-label="Cabeçalho principal">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-paw text-3xl text-[#4A3F35] hand-drawn-icon" aria-hidden="true"></i>
+                <h1 class="vintage-title text-2xl md:text-3xl font-bold text-[#4A3F35]">Adote um Amigo</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6" aria-label="Navegação principal">
+                <a href="#home" class="nav-link text-[#4A3F35] hover:text-[#588157] font-medium" aria-current="page">Início</a>
+                <a href="#about" class="nav-link text-[#4A3F35] hover:text-[#588157] font-medium">Sobre Nós</a>
+                <a href="#pets" class="nav-link text-[#4A3F35] hover:text-[#588157] font-medium">Animais para Adoção</a>
+                <a href="#help" class="nav-link text-[#4A3F35] hover:text-[#588157] font-medium">Como Ajudar</a>
+                <a href="#contact" class="nav-link text-[#4A3F35] hover:text-[#588157] font-medium">Contato</a>
+                <!-- Login Dropdown -->
+                <div class="relative group"> 
+                    <button class="flex items-center space-x-1 text-[#4A3F35] hover:text-[#588157] font-medium">
+                        <i class="fas fa-user-circle text-xl"></i>
+                        <span class="hidden lg:inline">Login</span>
+                    </button>
+                </div>            
+            </nav>
+            <button class="md:hidden text-2xl text-[#4A3F35]" id="mobile-menu-button" aria-label="Abrir menu mobile" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden bg-[#DDBEA9] mt-2 rounded-lg shadow-lg" id="mobile-menu" role="menu">
+            <div class="px-4 py-2 flex flex-col space-y-2">
+                <a href="#home" class="block px-3 py-2 text-[#4A3F35] hover:bg-[#A3B18A] rounded" role="menuitem">Início</a>
+                <a href="#about" class="block px-3 py-2 text-[#4A3F35] hover:bg-[#A3B18A] rounded" role="menuitem">Sobre Nós</a>
+                <a href="#pets" class="block px-3 py-2 text-[#4A3F35] hover:bg-[#A3B18A] rounded" role="menuitem">Animais para Adoção</a>
+                <a href="#help" class="block px-3 py-2 text-[#4A3F35] hover:bg-[#A3B18A] rounded" role="menuitem">Como Ajudar</a>
+                <a href="#contact" class="block px-3 py-2 text-[#4A3F35] hover:bg-[#A3B18A] rounded" role="menuitem">Contato</a>
+                <a href="#login" class="block px-3 py-2 text-[#4A3F35] hover:bg-[#A3B18A] rounded" role="menuitem">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção início -->
+    <section id="home" class="py-12 md:py-20 px-6 bg-[#FAF3DD]" aria-labelledby="hero-heading">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 mobile-center">
+                <h2 id="hero-heading" class="vintage-title text-4xl md:text-5xl font-bold mb-6 text-[#4A3F35]">Dê um lar para um amigo de rua</h2>
+                <p class="text-xl mb-8 text-[#4A3F35]">Centenas de animais esperam por uma segunda chance. Seu novo melhor amigo pode estar aqui!</p>
+                <div class="flex flex-wrap gap-4 mobile-stack">
+                    <button class="vintage-btn hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Ver animais para adoção">
+                        <i class="fas fa-paw mr-2" aria-hidden="true"></i> Adotar um Amigo
+                    </button>
+                    <button class="vintage-btn hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Ajudar os animais">
+                        <i class="fas fa-heart mr-2" aria-hidden="true"></i> Quero Ajudar
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative vintage-card p-2 sepia-filter">
+                    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2xyL2xvYzIwMDM2NjQwMjItaW1hZ2UuanBn.jpg" 
+                         alt="Cachorro sorrindo esperando por adoção" 
+                         class="w-full h-auto rounded-lg border-2 border-[#DDBEA9]">
+                    <div class="absolute -bottom-4 -right-4 bg-[#588157] text-[#FAF3DD] px-4 py-2 rounded-lg shadow-lg">
+                        <p class="font-bold">+800 adoções</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção sobre -->
+    <section id="about" class="py-16 px-6 bg-[#DDBEA9]" aria-labelledby="about-heading">
+        <div class="container mx-auto">
+            <h2 id="about-heading" class="vintage-title text-3xl md:text-4xl font-bold mb-12 text-center text-[#4A3F35]">Sobre Nós</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <img src="https://iheartdogs.com/wp-content/uploads/2019/10/Vintage-Dogs.jpg" 
+                         alt="Voluntários cuidando de animais de rua" 
+                         class="w-full h-auto rounded-lg sepia-filter border-2 border-[#A3B18A]">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="vintage-title text-2xl font-bold mb-4 text-[#4A3F35]">Nossa Missão</h3>
+                    <p class="mb-4 text-[#4A3F35]">Adote um Amigo nasceu da necessidade de oferecer um futuro melhor para animais abandonados. Resgatamos, cuidamos e buscamos lares responsáveis para cães e gatos que foram vítimas de abandono.</p>
+                    <p class="mb-6 text-[#4A3F35]">texto texto texto</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-[#FAF3DD] p-4 rounded-lg text-center vintage-card" aria-label="Animais resgatados">
+                            <i class="fas fa-paw text-3xl text-[#588157] mb-2" aria-hidden="true"></i>
+                            <p class="font-bold text-[#4A3F35]">+1200</p>
+                            <p class="text-sm text-[#4A3F35]">Resgatados</p>
+                        </div>
+                        <div class="bg-[#FAF3DD] p-4 rounded-lg text-center vintage-card" aria-label="Adoções realizadas">
+                            <i class="fas fa-home text-3xl text-[#588157] mb-2" aria-hidden="true"></i>
+                            <p class="font-bold text-[#4A3F35]">+800</p>
+                            <p class="text-sm text-[#4A3F35]">Adoções</p>
+                        </div>
+                        <div class="bg-[#FAF3DD] p-4 rounded-lg text-center vintage-card" aria-label="Voluntários ativos">
+                            <i class="fas fa-users text-3xl text-[#588157] mb-2" aria-hidden="true"></i>
+                            <p class="font-bold text-[#4A3F35]">30</p>
+                            <p class="text-sm text-[#4A3F35]">Voluntários</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vintage-divider" aria-hidden="true"></div>
+
+            <h3 class="vintage-title text-2xl font-bold mb-8 text-center text-[#4A3F35]">Nosso Processo</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="vintage-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[#FAF3DD] rounded-full flex items-center justify-center text-[#588157] text-2xl">
+                        <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Resgate</h4>
+                    <p class="text-[#4A3F35]">Nossa equipe resgata animais em situação de rua ou abandono, oferecendo os primeiros cuidados.</p>
+                </div>
+                <div class="vintage-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[#FAF3DD] rounded-full flex items-center justify-center text-[#588157] text-2xl">
+                        <i class="fas fa-medkit" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Recuperação</h4>
+                    <p class="text-[#4A3F35]">Cada animal recebe tratamento veterinário completo, vacinação, castração e cuidados especiais.</p>
+                </div>
+                <div class="vintage-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[#FAF3DD] rounded-full flex items-center justify-center text-[#588157] text-2xl">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Adoção</h4>
+                    <p class="text-[#4A3F35]">Buscamos lares responsáveis através de um processo cuidadoso de seleção e acompanhamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de galeria de animais -->
+    <section id="pets" class="py-16 px-6 bg-[#FAF3DD]" aria-labelledby="pets-heading">
+        <div class="container mx-auto">
+            <h2 id="pets-heading" class="vintage-title text-3xl md:text-4xl font-bold mb-12 text-center text-[#4A3F35]">Nossos Amigos para Adoção</h2>
+            
+            <div class="mb-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 filter-buttons">
+                    <button class="vintage-btn mr-2 active:bg-[#588157] active:text-[#FAF3DD]" data-filter="all">Todos</button>
+                    <button class="vintage-btn mr-2 active:bg-[#588157] active:text-[#FAF3DD]" data-filter="dog">Cães</button>
+                    <button class="vintage-btn mr-2 active:bg-[#588157] active:text-[#FAF3DD]" data-filter="cat">Gatos</button>
+                    <button class="vintage-btn active:bg-[#588157] active:text-[#FAF3DD]" data-filter="other">Outros</button>
+                </div>
+                <div class="relative">
+                    <input type="text" id="pet-search" placeholder="Buscar por nome..." class="vintage-input pl-10 pr-4 py-2 w-full md:w-64" aria-label="Buscar animais para adoção">
+                    <i class="fas fa-search absolute left-3 top-3 text-[#4A3F35]" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="pets-container">
+                <!-- Pet Card 1 -->
+                <div class="vintage-card p-4 pet-card" data-type="dog">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=689&q=80" 
+                             alt="Cachorro para adoção da raça SRD" 
+                             class="w-full h-48 object-cover rounded-lg sepia-filter">
+                        <span class="absolute top-2 right-2 bg-[#588157] text-[#FAF3DD] px-2 py-1 rounded text-xs">Disponível</span>
+                    </div>
+                    <h3 class="vintage-title text-xl font-bold mb-2 text-[#4A3F35]">Bolinha</h3>
+                    <p class="text-sm mb-2 text-[#4A3F35]"><i class="fas fa-dog mr-2 text-[#588157]" aria-hidden="true"></i> Cachorro - SRD, 2 anos</p>
+                    <p class="text-sm mb-2 text-[#4A3F35]"><i class="fas fa-map-marker-alt mr-2 text-[#588157]" aria-hidden="true"></i> Rio de Janeiro - RJ</p>
+                    <p class="text-sm mb-4 text-[#4A3F35]"><i class="fas fa-info-circle mr-2 text-[#588157]" aria-hidden="true"></i> Resgatado das ruas, muito carinhoso e brincalhão.</p>
+                    <button class="vintage-btn w-full hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Adotar Bolinha">
+                        <i class="fas fa-heart mr-2" aria-hidden="true"></i> Quero Adotar
+                    </button>
+                </div>
+
+                <!-- Pet Card 2 -->
+                <div class="vintage-card p-4 pet-card" data-type="cat">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" 
+                             alt="Gato para adoção da raça Persa" 
+                             class="w-full h-48 object-cover rounded-lg sepia-filter">
+                        <span class="absolute top-2 right-2 bg-[#588157] text-[#FAF3DD] px-2 py-1 rounded text-xs">Disponível</span>
+                    </div>
+                    <h3 class="vintage-title text-xl font-bold mb-2 text-[#4A3F35]">Mingau</h3>
+                    <p class="text-sm mb-2 text-[#4A3F35]"><i class="fas fa-cat mr-2 text-[#588157]" aria-hidden="true"></i> Gato - Persa, 1 ano</p>
+                    <p class="text-sm mb-2 text-[#4A3F35]"><i class="fas fa-map-marker-alt mr-2 text-[#588157]" aria-hidden="true"></i> Rio de Janeiro - RJ</p>
+                    <p class="text-sm mb-4 text-[#4A3F35]"><i class="fas fa-info-circle mr-2 text-[#588157]" aria-hidden="true"></i> Abandonado em um parque, tranquilo e afetuoso.</p>
+                    <button class="vintage-btn w-full hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Adotar Mingau">
+                        <i class="fas fa-heart mr-2" aria-hidden="true"></i> Quero Adotar
+                    </button>
+                </div>
+
+                <!-- Pet Card 3 -->
+                <div class="vintage-card p-4 pet-card" data-type="dog">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=662&q=80" 
+                             alt="Cachorro para adoção da raça Labrador" 
+                             class="w-full h-48 object-cover rounded-lg sepia-filter">
+                        <span class="absolute top-2 right-2 urgent-tag px-2 py-1 rounded text-xs">Urgente</span>
+                    </div>
+                    <h3 class="vintage-title text-xl font-bold mb-2 text-[#4A3F35]">Rex</h3>
+                    <p class="text-sm mb-2 text-[#4A3F35]"><i class="fas fa-dog mr-2 text-[#588157]" aria-hidden="true"></i> Cachorro - Labrador, 3 anos</p>
+                    <p class="text-sm mb-2 text-[#4A3F35]"><i class="fas fa-map-marker-alt mr-2 text-[#588157]" aria-hidden="true"></i> Rio de Janeiro - RJ</p>
+                    <p class="text-sm mb-4 text-[#4A3F35]"><i class="fas fa-info-circle mr-2 text-[#588157]" aria-hidden="true"></i> Vítima de maus-tratos, precisa de um lar paciente e amoroso.</p>
+                    <button class="vintage-btn w-full hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Adotar Rex">
+                        <i class="fas fa-heart mr-2" aria-hidden="true"></i> Quero Adotar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção como ajudar -->
+    <section id="help" class="py-16 px-6 bg-[#DDBEA9]" aria-labelledby="help-heading">
+        <div class="container mx-auto">
+            <h2 id="help-heading" class="vintage-title text-3xl md:text-4xl font-bold mb-12 text-center text-[#4A3F35]">Como Ajudar</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="vintage-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[#FAF3DD] rounded-full flex items-center justify-center text-[#588157] text-2xl">
+                        <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Doações</h3>
+                    <p class="text-[#4A3F35] mb-4">Sua contribuição financeira ajuda a custear tratamentos veterinários, ração e cuidados para nossos resgatados.</p>
+                    <button class="vintage-btn hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Fazer uma doação">
+                        Doar Agora
+                    </button>
+                </div>
+                
+                <div class="vintage-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[#FAF3DD] rounded-full flex items-center justify-center text-[#588157] text-2xl">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Lar Temporário</h3>
+                    <p class="text-[#4A3F35] mb-4">Ofereça um lar temporário para um animal enquanto ele não encontra uma família definitiva.</p>
+                    <button class="vintage-btn hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Ser lar temporário">
+                        Quero Acolher
+                    </button>
+                </div>
+                
+                <div class="vintage-card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-[#FAF3DD] rounded-full flex items-center justify-center text-[#588157] text-2xl">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Voluntariado</h3>
+                    <p class="text-[#4A3F35] mb-4">Doe seu tempo e habilidades para ajudar nos resgates, cuidados diários e eventos de adoção.</p>
+                    <button class="vintage-btn hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Tornar-se voluntário">
+                        Ser Voluntário
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de processo de adoção -->
+    <section id="process" class="py-16 px-6 bg-[#FAF3DD]" aria-labelledby="process-heading">
+        <div class="container mx-auto">
+            <h2 id="process-heading" class="vintage-title text-3xl md:text-4xl font-bold mb-12 text-center text-[#4A3F35]">Processo de Adoção</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="vintage-card p-4 text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-[#DDBEA9] rounded-full flex items-center justify-center text-[#4A3F35] text-xl font-bold">1</div>
+                    <h3 class="vintage-title font-bold mb-2 text-[#4A3F35]">Escolha</h3>
+                    <p class="text-sm text-[#4A3F35]">Selecione o animal que melhor se adapta ao seu estilo de vida e família.</p>
+                </div>
+                <div class="vintage-card p-4 text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-[#DDBEA9] rounded-full flex items-center justify-center text-[#4A3F35] text-xl font-bold">2</div>
+                    <h3 class="vintage-title font-bold mb-2 text-[#4A3F35]">Formulário</h3>
+                    <p class="text-sm text-[#4A3F35]">Preencha nosso formulário de adoção com informações sobre você e seu lar.</p>
+                </div>
+                <div class="vintage-card p-4 text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-[#DDBEA9] rounded-full flex items-center justify-center text-[#4A3F35] text-xl font-bold">3</div>
+                    <h3 class="vintage-title font-bold mb-2 text-[#4A3F35]">Visita</h3>
+                    <p class="text-sm text-[#4A3F35]">Agendamos uma visita para conhecer seu ambiente e tirar dúvidas.</p>
+                </div>
+                <div class="vintage-card p-4 text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-[#DDBEA9] rounded-full flex items-center justify-center text-[#4A3F35] text-xl font-bold">4</div>
+                    <h3 class="vintage-title font-bold mb-2 text-[#4A3F35]">Adoção</h3>
+                    <p class="text-sm text-[#4A3F35]">Assinatura do termo de adoção e acompanhamento pós-adoção.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="vintage-btn hover:bg-[#588157] hover:text-[#FAF3DD] px-8 py-3 text-lg" aria-label="Ver requisitos para adoção">
+                    <i class="fas fa-file-alt mr-2" aria-hidden="true"></i> Ver Requisitos Completos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-[#DDBEA9]" aria-labelledby="contact-heading">
+        <div class="container mx-auto max-w-4xl">
+            <div class="vintage-card p-8 md:p-12">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h2 id="contact-heading" class="vintage-title text-3xl font-bold mb-6 text-[#4A3F35]">Entre em Contato</h2>
+                        <p class="text-[#4A3F35] mb-6">Tem dúvidas sobre adoção, quer ser voluntário ou reportar um animal abandonado? Fale conosco!</p>
+                        <div class="mb-6">
+                            <h3 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Nossos Contatos</h3>
+                            <p class="text-[#4A3F35] mb-2"><i class="fas fa-envelope mr-2 text-[#588157]" aria-hidden="true"></i> contato@adoteumamigo.org</p>
+                            <p class="text-[#4A3F35] mb-2"><i class="fas fa-phone mr-2 text-[#588157]" aria-hidden="true"></i> (xx) xxxxx-xxxx</p>
+                            <p class="text-[#4A3F35]"><i class="fas fa-map-marker-alt mr-2 text-[#588157]" aria-hidden="true"></i> Rua dos Animais, 123 - Rio de Janeiro/RJ</p>
+                        </div>
+                        <div>
+                            <h3 class="vintage-title text-xl font-bold mb-3 text-[#4A3F35]">Horário de Funcionamento</h3>
+                            <p class="text-[#4A3F35] mb-1">Segunda a Sexta: 9h às 18h</p>
+                            <p class="text-[#4A3F35]">Sábado: 9h às 13h (somente para adoções agendadas)</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <form>
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-[#4A3F35] mb-2">Nome</label>
+                                <input type="text" id="contact-name" class="vintage-input w-full" aria-label="Seu nome">
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-[#4A3F35] mb-2">Email</label>
+                                <input type="email" id="contact-email" class="vintage-input w-full" aria-label="Seu email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-subject" class="block text-[#4A3F35] mb-2">Assunto</label>
+                                <select id="contact-subject" class="vintage-input w-full" aria-label="Assunto do contato">
+                                    <option value="">Selecione...</option>
+                                    <option value="adoption">Adoção</option>
+                                    <option value="volunteer">Voluntariado</option>
+                                    <option value="donation">Doação</option>
+                                    <option value="rescue">Resgate de Animal</option>
+                                    <option value="other">Outro</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-message" class="block text-[#4A3F35] mb-2">Mensagem</label>
+                                <textarea id="contact-message" rows="4" class="vintage-input w-full" aria-label="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="vintage-btn w-full hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Enviar mensagem">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#4A3F35] text-[#FAF3DD] py-8 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-paw text-2xl text-[#A3B18A] hand-drawn-icon" aria-hidden="true"></i>
+                        <h2 class="vintage-title text-xl font-bold">Adote um Amigo</h2>
+                    </div>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-[#FAF3DD] hover:text-[#A3B18A]" aria-label="Facebook da Adote um Amigo">
+                        <i class="fab fa-facebook text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="text-[#FAF3DD] hover:text-[#A3B18A]" aria-label="Instagram da Adote um Amigo">
+                        <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="text-[#FAF3DD] hover:text-[#A3B18A]" aria-label="Twitter da Adote um Amigo">
+                        <i class="fab fa-twitter text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="text-[#FAF3DD] hover:text-[#A3B18A]" aria-label="WhatsApp da Adote um Amigo">
+                        <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="vintage-title font-bold mb-2">Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu email" class="vintage-input rounded-r-none" aria-label="Assinar newsletter">
+                        <button class="vintage-btn rounded-l-none hover:bg-[#588157] hover:text-[#FAF3DD]" aria-label="Assinar newsletter">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
